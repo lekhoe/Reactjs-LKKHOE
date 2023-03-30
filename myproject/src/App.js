@@ -1,4 +1,3 @@
-import "./App.css";
 import DemoReactToolkit from "./page/DemoReactToolkit/DemoReactToolkit";
 
 function App() {

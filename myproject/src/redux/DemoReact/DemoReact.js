@@ -1,13 +1,20 @@
-import React from "react";
+import { createSlice } from "@reduxjs/toolkit";
 
-function DemoReact() {
-  return (
-    <>
-      <button>-</button>
-      <input />
-      <button>+</button>
-    </>
-  );
-}
+export const counterSlice = createSlice({
+  name: "counter",
+  initialState: {
+    value: 0,
+  },
+  reducers: {
+    increment: (state, action) => {
+      state.value = action.payload;
+    },
+    decrement: (state, action) => {
+      state.value = action.payload;
+    },
+  },
+});
 
-export default DemoReact;
+export const { increment, decrement } = counterSlice.actions;
+
+export default counterSlice.reducer;
